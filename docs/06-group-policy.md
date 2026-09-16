@@ -64,9 +64,13 @@ that a policy can apply. Testing the negative case is what separates "made a pol
 "understands policy targeting," and it prevents the common real-world mistake of linking a GPO
 too broadly.
 
-> **Screenshots:**
-> - `screenshots/06-gpo-applied-finance.png` — policy wallpaper on the Finance user's desktop.
-> - `screenshots/06-gpo-not-applied-sales.png` — default wallpaper on the Sales user's desktop.
+![Policy wallpaper applied on the Finance user's desktop](../screenshots/06-gpo-applied-finance.png)
+
+*In scope — the GPO wallpaper applied to Fiona (Finance).*
+
+![Default wallpaper on the Sales user's desktop, policy not applied](../screenshots/06-gpo-not-applied-sales.png)
+
+*Out of scope — Jim (Sales) keeps the default wallpaper on the same client, proving correct scope targeting.*
 
 ---
 

@@ -75,6 +75,13 @@ New-ADGroup -Name "Finance-Share-Read" -GroupScope DomainLocal -GroupCategory Se
 Add-ADGroupMember -Identity "Finance-Share-Read" -Members "Finance Staff"
 ```
 
+**Access tiers (multiple domain local groups per resource).** Because one resource commonly
+needs more than one access level, I created three domain local groups for the Finance share —
+`Finance-Share-Read`, `Finance-Share-RW`, and `Finance-Share-Modify` — each intended to be
+granted a different permission level on the same folder. Different role (global) groups can
+then be nested into whichever access tier fits, and the resource's ACL is set once and never
+touched again. This demonstrates the pattern scaling beyond the minimal single-tier chain.
+
 ---
 
 ## Verification
@@ -87,5 +94,6 @@ Confirmed the nesting from both directions in ADUC:
 The resulting chain: **Fiona → Finance Staff (global) → Finance-Share-Read (domain local)** —
 so Fiona inherits access transitively without ever being added to the resource group directly.
 
-> **Screenshot:** `screenshots/03-agdlp-nesting.png` — `Finance-Share-Read` Members tab showing
-> the nested `Finance Staff` group.
+![Finance-Share-Read Members tab showing the nested Finance Staff group](../screenshots/03-agdlp-nesting.png)
+
+*The `Finance-Share-Read` domain local group with the `Finance Staff` global group nested inside it (the G→DL link).*

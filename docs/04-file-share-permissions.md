@@ -73,5 +73,11 @@ Later (Phase 5), Fiona also accessed the share **over the network** as a domain 
 client via `\\DC01\FinanceShare`, confirming real end-to-end access — read allowed, write
 denied, exactly as configured.
 
-> **Screenshot:** `screenshots/04-effective-access.png` — Effective Access showing Fiona
-> allowed and Jim denied.
+![Effective Access side by side — Sales user Jim denied every permission, Finance user Fiona allowed read permissions and denied all write/delete permissions](../screenshots/04-effective-access.png)
+
+*Effective Access on `FinanceShare`, both users side by side. **Left — Jim (Sales):** every
+permission denied (out of scope). **Right — Fiona (Finance):** read-level permissions
+(Traverse, List folder / read data, Read attributes, Read permissions) allowed while all
+write, delete, and full-control permissions are denied. This proves two things at once — the
+AGDLP chain correctly grants the in-scope user and blocks the out-of-scope user, and the grant
+is scoped to **read-only**, not merely "access yes/no."*

@@ -81,8 +81,9 @@ Get-ADForest
 Server Manager showed three role tiles: **AD DS**, **DNS** (installed during promotion), and
 **File and Storage Services** (present by default).
 
-> **Screenshot:** `screenshots/01-get-addomain.png` — `Get-ADDomain` output showing DNSRoot
-> and NetBIOSName.
+![Get-ADDomain output showing DNSRoot ad.boydlab.net and NetBIOSName BOYDLAB](../screenshots/01-get-addomain.png)
+
+*`Get-ADDomain` output confirming the forest/domain built correctly.*
 
 ---
 

@@ -81,7 +81,9 @@ foreach ($dept in $departments) {
 }
 ```
 
-> **Screenshot:** `screenshots/02-ou-tree.png` — the completed OU tree in ADUC.
+![Completed OU tree in ADUC showing Boyd Industries with department and object-type sub-OUs](../screenshots/02-ou-tree.png)
+
+*The completed OU tree in ADUC — Boyd Industries with department OUs and nested Users/Computers/Groups.*
 
 ---
 

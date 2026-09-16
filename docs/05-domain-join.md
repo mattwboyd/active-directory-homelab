@@ -77,7 +77,9 @@ Returned `True` with `Domain : ad.boydlab.net`. On DC01, `Get-ADComputer -Filter
 `BOYDS2` had landed in the default `Computers` container (the un-redirected default behavior
 noted in Phase 2).
 
-> **Screenshot:** `screenshots/05-partofdomain-true.png` — `PartOfDomain : True` on the client.
+![PartOfDomain returning True on the client, confirming the domain join](../screenshots/05-partofdomain-true.png)
+
+*`PartOfDomain : True` — the client (BOYDS2) confirmed as a domain member.*
 
 ---
 
